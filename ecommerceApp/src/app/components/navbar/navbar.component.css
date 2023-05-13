@@ -1,0 +1,51 @@
+.toolbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    z-index: 999;
+    margin: 0px;
+    border-bottom: 15px solid #3F51B5;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.toolbar a {
+    margin: 25px;
+}
+
+.circle-button {
+    color: darkgray;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 1em;
+    transition: color 0.3s;
+    justify-content: space-evenly;
+    display: inline-flex;
+    align-items: center;
+}
+
+.circle-button:hover {
+    color: #3F51B5;
+}
+
+.active-link {
+    color: #3F51B5;
+}
+
+.home-button {
+    font-size: 1.8em;
+    color: #3F51B5;
+    text-decoration: none;
+    /* Removes the underline */
+    transition: color 0.5s;
+}
+
+.home-button:hover {
+    color: #f87205;
+}

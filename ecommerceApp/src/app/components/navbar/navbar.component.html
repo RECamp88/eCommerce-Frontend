@@ -1,0 +1,19 @@
+<div class="toolbar" role="banner">
+    <a *ngIf="!isLoggedIn; else loggedIn" class="home-button" style="font-size: 1.8em;">Attic Art Studios</a>
+    <ng-template #loggedIn>
+      <a routerLink="/Welcome" class="home-button">Attic Art Studios</a>
+    </ng-template>
+        <div class="spacer"></div>
+        
+        <div *ngIf="isLoggedIn">
+          <a routerLink="/shop" routerLinkActive="active-link" class="circle-button">
+            <span>Shop</span>
+          </a>
+                   <a routerLink="/account" class="circle-button" routerLinkActive="active-link" id ="account">
+            <span>Account</span>
+          </a>
+          <a routerLink="/checkout" class="circle-button" routerLinkAvtive="active-link" id="checkout">
+            <mat-icon [matBadge]="badgeCounter" [matBadgeHidden]="hideMatBadge">shopping_cart</mat-icon>
+          </a>
+      </div>
+    </div>
