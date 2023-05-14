@@ -7,13 +7,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class CustomerService {
 
-  customer: Customer = {id: 0, firstName: '', lastName: '', email: '', password: ''}
+  customer: Customer = {id: 0, firstName: "", lastName: "", email: "", password: ""}
   loggedIn : boolean = false;
   
   
   constructor(private http: HttpClient) { }
 
-  ev = "http://localhost:9000"
+  ev = "http://localhost:9000";
 
   accInfo: any
   loginEmail: any
@@ -28,13 +28,5 @@ export class CustomerService {
   }
 
 
-  resetAccInfo() {
-    this.accInfo = {
-      id: 0,
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: ''
-    }
-  }
+  
 }

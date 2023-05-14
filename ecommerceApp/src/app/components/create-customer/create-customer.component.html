@@ -1,35 +1,28 @@
-<mat-form-field class ="example-full-width">
+<div>
+  <mat-form-field class ="example-full-width">
     <mat-label>First Name:</mat-label>
     <input type="text" matInput placeholder="First Name">
-</mat-form-field>
+  </mat-form-field>
 
-<mat-form-field class ="example-full-width">
+  <mat-form-field class ="example-full-width">
     <mat-label>Last Name:</mat-label>
     <input type="text" matInput placeholder="Last Name">
-</mat-form-field>
+  </mat-form-field>
 
-<mat-form-field class="example-full-width">
+  <mat-form-field class="example-full-width">
     <mat-label>Email:</mat-label>
-    <input type="email" matInput placeholder="Email" [formControl]="reg_emailFormControl" [(ngModel)]="reg_email" required>
-    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-      Please enter a valid email address
-    </mat-error>
-    <mat-error *ngIf="emailFormControl.hasError('required')">
-      Email is <strong>required</strong>
-    </mat-error>
+    <input type="email" matInput placeholder="Email" required>
     <mat-icon matSuffix>email</mat-icon>
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
     <mat-label>Password:</mat-label>
-    <input [type]="hide ? 'password' : 'text'" matInput placeholder="Password" minlength="4" [(ngModel)]="reg_password" required>
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button>
+    <input type="password" matInput placeholder="Password" minlength="4" required>    
   </mat-form-field>
 
-  <button class="mat-button" mat-raised-button color="primary" (click)="createUser()" [disabled]="!reg_emailFormControl.valid || reg_password.length <=4">Register</button>
+  <button class="mat-button" mat-raised-button color="primary" (click)="addCustomer()">Register</button>
+</div>
 
 
-   <!-- Displays message on Register tab -->
-   <h3 class="message" *ngIf="registerVisible">{{reg_message}}</h3>
+
+ 
