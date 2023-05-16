@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -8,7 +9,13 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductListComponent implements OnInit {
  
-  products: any;
+  product: Product={
+    id: 0,
+    name: '',
+    unitPrice: 0,
+    productImg: ''
+  }
+  products: Product[] = [];
  
   constructor(public productService: ProductService) {}
  
@@ -16,9 +23,12 @@ export class ProductListComponent implements OnInit {
     this.refresh();
   }
 
-   refresh(): void {
-      this.productService.getAllProducts().subscribe(json => {this.products = json; console.log(this.products);}); 
-   } 
+  refresh(): void {
+      this.productService.getAllProducts().subscribe(json => {
+      this.products = json as Product[]; 
+      console.log(this.products);
+      }); 
+  } 
 
-    
+ 
 }

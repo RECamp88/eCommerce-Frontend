@@ -1,0 +1,77 @@
+mat-toolbar {
+    background-color: #576063;
+    color: white;
+    align-items: end;
+}
+
+mat-toolbar h1 {
+    margin-left: 58px;
+}
+
+.basic-card {
+    max-width: 200px;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.center-content {
+    text-align: -webkit-center
+}
+
+.example-form {
+    min-width: 100px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.example-full-width {
+    margin-right: 10px;
+    width: 70%;
+    
+}
+
+.example-mid-width {
+    margin-right: 10px;
+}
+
+.mat-button {
+    margin-top: 10px;
+    width: 30%;
+    margin-bottom: 25px;
+}
+
+.mat-mdc-card-header {
+    display: flex;
+    padding: 16px 16px 0;
+    justify-content: space-around;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(src/assets/images/attic.jpg);
+    background-size: cover;
+}
+
+.message {
+    padding-top: 10px;
+    color: #D72B2B;
+}
+
+.verification {
+    padding-top: 10px;
+    color: #576063;
+}
+
+img {
+    height: 600px;
+}
+
+.mat-mdc-raised-button.mat-primary {
+    --mdc-protected-button-container-color: #576063;
+    --mdc-protected-button-label-text-color: white;
+}
+

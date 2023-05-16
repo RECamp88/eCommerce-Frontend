@@ -9,12 +9,13 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductComponent {
 
-  @Input()
+  
   product: Product = {
     id: 0,
     name: '',
     unitPrice: 0,
-    imageURL: ''
+    productImg: ''
+    
   }
 constructor(private productService: ProductService) {}
 

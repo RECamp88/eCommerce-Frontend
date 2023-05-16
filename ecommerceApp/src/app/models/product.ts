@@ -3,8 +3,8 @@ export interface Product{
          id: number,
          name: String,
          unitPrice: number,
-         imageURL: string
-   
+         productImg: String
+           
 }
 
 

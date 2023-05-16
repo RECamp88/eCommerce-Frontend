@@ -7,9 +7,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class CustomerService {
 
-  customer: Customer = {id: 0, firstName: "", lastName: "", email: "", password: ""}
-  loggedIn : boolean = false;
-  
+  customer: Customer = {
+    id: 0,
+    firstName: '',
+    lastName: '',
+    address: '',
+    email: '',
+    password: ''
+  }
+  loggedIn : boolean = true;
   
   constructor(private http: HttpClient) { }
 
@@ -27,6 +33,12 @@ export class CustomerService {
     return this.http.post<Customer>(`${this.ev}/customer/register`, customer, {headers: header});
   }
 
-
+  patchInfoAPI(id: number, customer: Customer) {
+    let header: HttpHeaders = new HttpHeaders();
+      header.append("accept", "text/json");
+      header.append("Access-Control-Allow-Origin", "*");
+      console.log(customer);
+    return this.http.patch<Customer>(`${this.ev}/customer/${id}`, { firstName: customer.firstName, lastName: customer.lastName, street: customer.address, email: customer.email, password: customer.password }, { headers: header });
+  }
   
 }

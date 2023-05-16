@@ -6,12 +6,14 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { ShopComponent } from './pages/shop/shop.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { CustomerFormComponent } from './components/customer-form/customer-form.component';
 
 const routes: Routes = [
   { path: 'home', component: LandingPageComponent},
   { path: 'checkout', component: CheckoutComponent},
   { path: 'shop', component: ShopComponent},
   { path: 'product', component: ProductDetailsComponent},
+  { path: 'account', component: CustomerFormComponent},
   { path: '**', component: LandingPageComponent}
 ];
 

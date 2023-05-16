@@ -1,5 +1,5 @@
 mat-toolbar {
-    background-color: #3F51B5;
+    background-color: #576063;
     color: white;
     align-items: end;
 }
@@ -47,7 +47,6 @@ mat-toolbar h1 {
     justify-content: center;
     align-items: center;
     height: 100vh;
-   /*  background-image: url(https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80); */
     background-image: url(src/assets/images/attic.jpg);
     background-size: cover;
 }
@@ -59,7 +58,7 @@ mat-toolbar h1 {
 
 .verification {
     padding-top: 10px;
-    color: #3F51B5;
+    color: #576063;
 }
 
 img {
@@ -67,6 +66,6 @@ img {
 }
 
 .mat-mdc-raised-button.mat-primary {
-    --mdc-protected-button-container-color: #3F51B5;
+    --mdc-protected-button-container-color: #576063;
     --mdc-protected-button-label-text-color: white;
 }

@@ -8,7 +8,7 @@
     font-weight: 600;
     z-index: 999;
     margin: 0px;
-    border-bottom: 15px solid #3F51B5;
+    border-bottom: 15px solid #576063;
 }
 
 .spacer {
@@ -31,16 +31,20 @@
 }
 
 .circle-button:hover {
-    color: #3F51B5;
+    color: #f87205;
 }
 
 .active-link {
-    color: #3F51B5;
+    color: #40575f;
+}
+
+.active-link:hover{
+    color: #f87205; 
 }
 
 .home-button {
     font-size: 1.8em;
-    color: #3F51B5;
+    color: #576063;
     text-decoration: none;
     /* Removes the underline */
     transition: color 0.5s;

@@ -20,8 +20,11 @@
   </mat-form-field>
 
    <!-- Login Button -->
-  <button class="mat-button" mat-raised-button color="primary" (click)="postLogin()" [disabled]="!emailFormControl.valid || customer.password.length <=4">Log In</button>
+  <button class="mat-button" mat-raised-button color="#576063" (click)="postLogin()" routerLink="/shop" [disabled]="!emailFormControl.valid || customer.password.length <=4">Log In</button>
 
+  <!-- Register -->
+  <p>Not registered? Sign up for free!</p>
+  <button class="mat-button" mat-raised-button color="#576063" (click)="onRoute()">Sign Up</button>
 
   <!-- Displays message on Login tab -->
   <h3 class="message" *ngIf="messageVisible">{{message}}</h3>

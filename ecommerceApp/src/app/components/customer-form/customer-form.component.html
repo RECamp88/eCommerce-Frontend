@@ -1,26 +1,41 @@
-<table class="table table-striped table-hover">
-	<thead>
-		<tr>
-			<th>Customer Details</th>
-		</tr>
-	</thead>
-	<tbody class="table-group-divider">
-        <tr>
-			<th scope="row">First Name:</th>
-            <td>{{ customer.firstName }}</td>
-        </tr>
-        <tr>
-			<th scope="row">Last Name:</th>
-            <td>{{ customer.lastName }}</td>
-        </tr>
-        <tr>
-            <th scope="row">Email:</th>
-            <td>{{ customer.email }}</td>
-		</tr>
-        <tr>
-            <th scope="row">Password:</th>
-            <td>{{ customer.password }}</td>
-        </tr>
+<div class="center">
+  <div class="center-content">
+    <mat-card class="example-card">
+
+      <div class="header">
+        <mat-card-header>
+          <mat-card-title>Customer Profile</mat-card-title>
+        </mat-card-header>
+      </div>
+      <div style="font-size: 10px">
+        <mat-card-content>
+          <mat-form-field class="example-mid-width">
+            <mat-label>First Name: </mat-label>
+            <input type="text" matInput placeholder="First Name" [(ngModel)]="customer.firstName" required>
+          </mat-form-field>
+          <mat-form-field class="example-mid-width">
+            <mat-label>Last Name: </mat-label>
+            <input type="text" matInput placeholder="Last Name" [(ngModel)]="customer.lastName" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Street Address: </mat-label>
+            <input type="text" matInput placeholder="Street Address" [(ngModel)]="customer.address" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email: </mat-label>
+            <input type="text" matInput placeholder="Email" [(ngModel)]="customer.email" required>
+          </mat-form-field> 
+          <mat-form-field class="example-full-width">
+            <mat-label>Password </mat-label>
+            <input type="text" matInput placeholder="Passwork" [(ngModel)]="customer.password" required>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <div>
+          <button class="mat-button" mat-raised-button color="#576063" (click)="addCustomer()">Register</button>
+        </div>
+      </div>
      
-	</tbody>
-</table>
+    </mat-card>
+  </div>
+</div>

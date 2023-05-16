@@ -11,10 +11,11 @@ import { Customer } from '../models/customer';
 })
 export class LoginService {
 
-  customer: Customer = {
+  loggedInCustomer: Customer = {
     id: 0,
     firstName: '',
     lastName: '',
+    address: '',
     email: '',
     password: ''
   };
@@ -28,15 +29,15 @@ export class LoginService {
   ev = "http://localhost:9000"           
   
   setCustomer(customer: Customer){
-    this.customer = customer;
+    this.loggedInCustomer = customer;
   }
 
   setEmail (email : string){
-    this.customer.email = email;
+    this.loggedInCustomer.email = email;
   }
 
   setPassword (password : string){
-    this.customer.password = password;
+    this.loggedInCustomer.password = password;
   }
 
   verifyCustomer(customer: Customer) : boolean {
