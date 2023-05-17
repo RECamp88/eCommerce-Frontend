@@ -1,8 +1,7 @@
 export interface Customer {
     id: number,
-    firstName: String,
-    lastName: String,
-    address: String,
+    name: String,
+    balance: number,
     email : String,
     password: String
 }

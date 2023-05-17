@@ -1,0 +1,9 @@
+mat-toolbar {
+    background-color: #576063;
+    color: white;
+    align-items: end;
+}
+
+mat-toolbar h1 {
+    margin-left: 58px;
+}

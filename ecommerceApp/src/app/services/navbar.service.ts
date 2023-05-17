@@ -5,10 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class NavbarService {
   selectedMenuItem : string = "home";
-
+ 
   constructor() { }
 
   setSelected(newSelection : string){
     this.selectedMenuItem = newSelection;
   }
+
+  
 }

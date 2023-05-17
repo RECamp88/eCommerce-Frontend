@@ -5,5 +5,5 @@ import { Product } from "./product";
 export interface Purchase {
     customer : Customer,
     order : Order,
-    orderProducts? : Product
+    orderProducts? : Product []
 }

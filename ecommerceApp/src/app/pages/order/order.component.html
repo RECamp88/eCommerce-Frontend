@@ -1,0 +1,42 @@
+<div class="center">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Attic Art Studios Order</mat-card-title>
+        </mat-card-header>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content>
+            
+            <!-- Product information section -->
+            <section class="wrapper-main">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Product Quantity</th>
+                            <th scope="col">Product Price Each</th>
+                            <th scope="col">Total Cost</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>  
+                          <tr *ngFor="let items of cartItems;">                  
+                                <td>{{items.name}}</td>
+                                <td>{{items.quantity}}</td>                        
+                                <td>{{items.unitPrice | currency}}</td>
+                                                                            
+                            </tr>
+                    </tbody>
+                </table>
+            </section>     
+            <mat-divider></mat-divider>
+            <h1> Your total is: {{this.cartTotal | currency}} </h1>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-actions>
+            <button mat-raised-button (click)="processOrder()">Checkout</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+

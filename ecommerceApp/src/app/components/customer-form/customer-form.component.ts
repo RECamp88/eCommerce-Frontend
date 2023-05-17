@@ -29,9 +29,8 @@ export class CustomerFormComponent implements OnInit {
 
  customer: Customer = {
     id: 0,
-    firstName: '',
-    lastName: '',
-    address: '',
+    name: '',
+    balance: 0,
     email: '',
     password: ''
  }
@@ -65,11 +64,10 @@ export class CustomerFormComponent implements OnInit {
   updateInfo() {
       let customerUpdate: Customer = {
         id: this.customer.id,
-        firstName: this.userInput.firstName,
-        lastName: this.userInput.lastName,
-        address: this.userInput.address,
+        name: this.userInput.name,
         email: this.userInput.email,
-        password: this.userInput.password
+        password: this.userInput.password,
+        balance: 0
       }
       this.customerService.patchInfoAPI(this.customer.id, customerUpdate).subscribe(json => {
         console.log(customerUpdate);
@@ -79,9 +77,9 @@ export class CustomerFormComponent implements OnInit {
   }
 
   clearFields() {
-    this.customer.firstName = '';
-    this.customer.lastName = '';
-    this.customer.address = '';
+    this.customer.name = '';
+    this.customer.email = '';
+    this.customer.password = '';
        
   }
   

@@ -16,9 +16,8 @@ export class CreateCustomerComponent {
 
   customer: Customer = {
     id: 0,
-    firstName: '',
-    lastName: '',
-    address: '',
+    name: '',
+    balance: 0,
     email: '',
     password: ''
   }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Customer } from 'src/app/models/customer';
 import { LoginService } from 'src/app/services/login.service';
@@ -41,10 +41,10 @@ export class LoginFormComponent {
   reg_emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
   hide = true;
-  
- onRoute(): void{
-  this.router.navigate(['/account']);
- }
+ 
+  onRoute(): void{
+    this.router.navigate(['/account']);
+  }
   postLogin(): void {
    
     this.loginService.loginCustomer(this.customer).subscribe( json => {

@@ -1,0 +1,66 @@
+mat-toolbar {
+    background-color: #576063;
+    color: white;
+    align-items: end;
+}
+
+mat-toolbar h1 {
+    margin-left: 58px;
+}
+mat-card-content mat-card-actions {
+    justify-content: center;
+}
+.basic-card {
+    max-width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+    padding: 10px;
+}
+
+.center-content {
+    text-align: -webkit-center
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.mat-button {
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.mat-mdc-card-header {
+    display: flex;
+    padding: 16px 16px 0;
+    justify-content: space-around;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #576063;
+    background-size: cover;
+}
+
+
+img {
+    height: 250px;
+}
+
+.mat-mdc-raised-button.mat-primary {
+    --mdc-protected-button-container-color: #576063;
+    --mdc-protected-button-label-text-color: white;
+}

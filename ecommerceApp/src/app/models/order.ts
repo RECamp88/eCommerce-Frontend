@@ -1,9 +1,7 @@
 export interface Order{
     id: number,
     totalQuantity: number,
-    totalPrice: number,
-    dateCreated: Date,
-    dateUpdated: Date
+    totalPrice: number  
 }
 
 
