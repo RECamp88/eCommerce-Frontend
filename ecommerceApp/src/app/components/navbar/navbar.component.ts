@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { CustomerService } from 'src/app/services/customer.service';
-import { NavbarService } from 'src/app/services/navbar.service';
+
 
 
 
@@ -13,7 +13,7 @@ export class NavbarComponent {
  
 
 
-  constructor(public customerService: CustomerService, public navbarService: NavbarService) { }
+  constructor(public customerService: CustomerService) { }
 
   get isLoggedIn() {
     return this.customerService.loggedIn;

@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Customer } from 'src/app/models/customer';
-import { LoginService } from 'src/app/services/login.service';
 import { Router } from '@angular/router';
 import { CustomerService } from 'src/app/services/customer.service';
 
@@ -24,15 +23,14 @@ export class LoginFormComponent {
 
   customer: Customer = {
     id: 0,
-    firstName: '',
-    lastName: '',
-    address: '',
+    name: '',
+    balance: 0,
     email: '',
-    password: ''
+    password: '',
+    order: []
   };
   
   constructor(
-    private loginService : LoginService,
     private customerService: CustomerService,
     private router: Router
     ) { }
@@ -47,11 +45,10 @@ export class LoginFormComponent {
   }
   postLogin(): void {
    
-    this.loginService.loginCustomer(this.customer).subscribe( json => {
-      this.loginService.loggedInCustomer = json;
-      console.log(this.loginService.loggedInCustomer);
-      this.customerService.loggedIn = true;
-      
+    this.customerService.postLogin(this.customer).subscribe( json => {
+    this.customerService.customer = json;
+    console.log(this.customer);
+    this.customerService.loggedIn = true;      
     });
   } 
 

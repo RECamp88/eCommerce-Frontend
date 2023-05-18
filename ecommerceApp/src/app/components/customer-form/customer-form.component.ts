@@ -28,18 +28,19 @@ export class CustomerFormComponent implements OnInit {
   loginPassword: string = this.customerService.loginPassword;
 
  customer: Customer = {
-    id: 0,
-    name: '',
-    balance: 0,
-    email: '',
-    password: ''
+   id: 0,
+   name: '',
+   balance: 0,
+   email: '',
+   password: '',
+   order: []
  }
   showMessage = true;
   message: string | null = null;
   hide = true;
 
   addCustomer(): void {
-    this.customerService.postRegisterAPI(this.customer).subscribe(json => {
+    this.customerService.postRegister(this.customer).subscribe(json => {
     this.customerService.customer = json;
     console.log(json);});
     this.customerService.loggedIn=true;
@@ -61,21 +62,7 @@ export class CustomerFormComponent implements OnInit {
 
   showProfile = true;
 
-  updateInfo() {
-      let customerUpdate: Customer = {
-        id: this.customer.id,
-        name: this.userInput.name,
-        email: this.userInput.email,
-        password: this.userInput.password,
-        balance: 0
-      }
-      this.customerService.patchInfoAPI(this.customer.id, customerUpdate).subscribe(json => {
-        console.log(customerUpdate);
-        this.customerService.accInfo = json;
-        
-      });
-  }
-
+ 
   clearFields() {
     this.customer.name = '';
     this.customer.email = '';

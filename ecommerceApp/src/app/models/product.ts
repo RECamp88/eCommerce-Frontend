@@ -3,6 +3,7 @@ export interface Product{
          id: number,
          name: String,
          unitPrice: number,
+         quantity: number, 
          productImg: String
            
 }

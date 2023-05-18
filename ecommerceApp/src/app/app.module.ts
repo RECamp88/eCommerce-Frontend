@@ -12,17 +12,13 @@ import { RouterModule, Routes} from '@angular/router';
 // Component Modules
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
-import { ProductComponent } from './components/product/product.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { ShopComponent } from './pages/shop/shop.component';
-import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-import { CreateCustomerComponent } from './components/create-customer/create-customer.component';
-import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { CustomerFormComponent } from './components/customer-form/customer-form.component';
-
+import { OrderComponent } from './pages/order/order.component';
 //Angular Material Modules
-import { MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -37,7 +33,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { OrderComponent } from './pages/order/order.component';
+
+
+
 
 const routes: Routes = []
 
@@ -46,16 +44,14 @@ const routes: Routes = []
     AppComponent,
     NavbarComponent,
     ProductListComponent,
-    ProductComponent,
     LandingPageComponent,
     ShopComponent,
-    CheckoutComponent,
     LoginFormComponent,
-    CreateCustomerComponent,
-    ProductDetailsComponent,
     CustomerFormComponent,
-    OrderComponent,    
+    OrderComponent,
+    
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -64,6 +60,7 @@ const routes: Routes = []
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
+
     //Angular Material Imports
     MatCardModule,
     MatButtonModule,
@@ -80,7 +77,8 @@ const routes: Routes = []
     MatListModule,
     MatButtonToggleModule,
     MatBadgeModule,
-    MatGridListModule,   
+    MatGridListModule, 
+      
         
   ],
   providers: [HttpClientModule],

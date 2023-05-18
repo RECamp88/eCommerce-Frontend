@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CartItem } from 'src/app/common/cart-item';
 import { Product } from 'src/app/models/product';
-import { OrderService } from 'src/app/services/order.service';
+import { CustomerService } from 'src/app/services/customer.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -15,12 +14,16 @@ export class ProductListComponent implements OnInit {
     id: 0,
     name: '',
     unitPrice: 0,
-    productImg: ''
+    productImg: '',
+    quantity: 1
   }
   products: Product[] = [];
+  customerService: any;
   
-  constructor(public productService: ProductService,
-              public orderService: OrderService) {}
+  constructor(public productService: ProductService, customerService : CustomerService) {
+    this.productService = productService;
+    this.customerService = customerService;
+  }
  
   ngOnInit(): void {
     this.refresh();
@@ -35,10 +38,8 @@ export class ProductListComponent implements OnInit {
 
   addToCart(tempProduct: Product){
     console.log(tempProduct);
-
-    const cartItem = new CartItem(tempProduct);
-
-    this.orderService.addToCart(cartItem);
+    const cartItem = tempProduct;
+    this.customerService.addToCart(cartItem);
 
   }
  
