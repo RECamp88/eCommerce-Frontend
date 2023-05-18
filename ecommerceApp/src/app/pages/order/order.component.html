@@ -16,8 +16,7 @@
                             <th scope="col">Product Name</th>
                             <th scope="col">Product Quantity</th>
                             <th scope="col">Product Price Each</th>
-                            <th scope="col">Total Cost</th>
-                            
+                                                        
                         </tr>
                     </thead>
                     <tbody>  
@@ -30,11 +29,10 @@
                     </tbody>
                 </table>
             </section>     
-            <mat-divider></mat-divider>
-            
         </mat-card-content>
         <mat-divider></mat-divider>
         <mat-card-actions>
+            <h3>Your Order Total: {{this.customerService.customer.balance | currency}}</h3>
             <button mat-raised-button (click)="processOrder()">Checkout</button>
         </mat-card-actions>
     </mat-card>

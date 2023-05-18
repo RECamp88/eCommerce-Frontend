@@ -19,8 +19,6 @@ THIS COMPONENT DISPLAYS THE ACTUAL CUSTOMER ACCOUNT DATA
 })
 export class CustomerFormComponent implements OnInit {
 
-  @ViewChild('profile') profileRef!: ElementRef;
- 
   constructor(private router: Router, private customerService: CustomerService) {}
 
   userInput: any = this.customerService.accInfo;
@@ -41,7 +39,7 @@ export class CustomerFormComponent implements OnInit {
 
   addCustomer(): void {
     this.customerService.postRegister(this.customer).subscribe(json => {
-    this.customerService.customer = json;
+    this.customer = json as Customer;
     console.log(json);});
     this.customerService.loggedIn=true;
     this.router.navigateByUrl('home');

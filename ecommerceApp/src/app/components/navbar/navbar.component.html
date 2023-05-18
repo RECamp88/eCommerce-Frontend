@@ -1,11 +1,9 @@
 <div class="toolbar" role="banner">
-    <a *ngIf="!isLoggedIn; else loggedIn" class="home-button" style="font-size: 1.8em;">Attic Art Studios</a>
-    <ng-template #loggedIn>
-      <a routerLink="/Welcome" class="home-button">Attic Art Studios</a>
-    </ng-template>
+    <a  class="home-button" style="font-size: 1.8em;">Attic Art Studios</a>
+    
         <div class="spacer"></div>
         
-        <div *ngIf="isLoggedIn">
+        <div >
           <a routerLink="/shop" routerLinkActive="active-link" class="circle-button">
             <span>Shop</span>
           </a>

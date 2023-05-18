@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Customer } from 'src/app/models/customer';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Product } from '../models/product';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,15 @@ export class CustomerService {
     password: '',
     order: []
   }
+
+  product: Product= {
+    id: 0,
+    name: '',
+    unitPrice: 0,
+    quantity: 0,
+    productImg: ''
+  }
+  
   loggedIn : boolean = false;
   
   constructor(private http: HttpClient) { }
@@ -54,7 +64,7 @@ export class CustomerService {
     let header: HttpHeaders = new HttpHeaders();
     header.append("accept", "text/json");
     header.append("Access-Control-Allow-Origin", "*"); 
-    return this.http.post<Customer>(`${this.ev}/customer/{id}/addToOrder/{prodId}`, customer, {headers: header});
+    return this.http.post<Customer>(`${this.ev}/customer/${id}/addToOrder/${prodId}`, customer, {headers: header});
   }
 
   // this service is used to retrieve a specific customer 

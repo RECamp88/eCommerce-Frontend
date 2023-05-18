@@ -46,10 +46,10 @@ export class LoginFormComponent {
   postLogin(): void {
    
     this.customerService.postLogin(this.customer).subscribe( json => {
-    this.customerService.customer = json;
-    console.log(this.customer);
+    this.customerService.customer = json as any;
+    console.log(this.customerService.customer);
     this.customerService.loggedIn = true;      
-    });
+    })
   } 
 
 }
